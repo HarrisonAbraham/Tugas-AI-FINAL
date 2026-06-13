@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookVibe - Rekomendasi Buku AI</title>
+    
+    <!-- Menghubungkan ke file CSS Eksternal -->
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Menghubungkan ke file JavaScript Eksternal -->
+    <!-- Atribut 'defer' memastikan skrip berjalan setelah HTML selesai dimuat -->
+    <script src="script.js" defer></script>
+    
+    <!-- Font Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                📚 <span>BookVibe</span>
+            </div>
+            <div class="nav-subtitle">Berdasarkan Vibe & Cerita</div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1 class="hero-title">
+                Temukan Buku Selanjutnya <br><span class="text-highlight">Lewat Sebuah Cerita</span>
+            </h1>
+            <p class="hero-desc">
+                Jangan cari berdasarkan genre. Tuliskan plot, suasana, atau perasaan yang ingin kamu baca, dan AI akan mencarikan buku yang paling pas.
+            </p>
+        </section>
+
+        <!-- Input Card -->
+        <div class="card-input">
+            <form id="searchForm">
+                <div class="form-group">
+                    <label for="description" class="form-label">
+                        Gambarkan buku yang ingin kamu baca:
+                    </label>
+                    <textarea 
+                        id="description" 
+                        rows="4" 
+                        class="form-textarea"
+                        placeholder="Contoh: Kisah detektif di kota tua yang penuh hujan dan misteri pembunuhan yang membingungkan..."
+                        required></textarea>
+                </div>
+                <button type="submit" class="btn-submit">
+                    ✨ Carikan Buku Untukku
+                </button>
+            </form>
+        </div>
+
+        <!-- Loading State (Hidden by default) -->
+        <div id="loading" class="loading-state hidden">
+            <div class="spinner"></div>
+            <p>AI sedang membaca ribuan sinopsis buku...</p>
+        </div>
+
+        <!-- Results Section -->
+        <div id="resultsSection" class="results-section hidden">
+            <h2 class="results-title">🎯 Rekomendasi Terbaik Untukmu</h2>
+            <div id="resultsContainer" class="results-container">
+                <!-- Kartu Hasil akan di-inject lewat JavaScript di sini -->
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        &copy; 2026 BookVibe AI. Dibuat dengan ❤️ untuk Pembaca Buku.
+    </footer>
+
+</body>
+</html>
